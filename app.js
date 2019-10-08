@@ -12,29 +12,32 @@ var iceCreamShop = {
     locationName: 'Pike Place Market';
 }
 */
+
+var seattleStore = document.getElementById('seattleLocation');
+
+// console.log("Testing the generator: " + randomNumber(3, 50));
+
 var randomNumber = function(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+   // min = Math.ceil(min);
+    //max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
-console.log("Testing the generator: " + randomNumber(3, 50));
 
-var parentEl = document.getElementById('parentElement');
-
-var artShop = {
+var seattle = {
     shopHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
-    min: 5,
-    max: 120,
-    avgCookies: 10,
+    min: 23,
+    max: 65,
+    avgCookie: 6.3,
     unitsSoldPerHour: [],
-    locationName: 'Dubai Marketplace',
+    locationName: 'seattle ',
     
     render: function(){
         for (var i = 0; i < this.shopHours.length; i++) {
-            artShop.unitsSoldPerHour.push((randomNumber(artShop.min, artShop.max)*artShop.avgCookies));
+            var cookiesSold = Math.floor( randomNumber(seattle.min, seattle.max) * seattle.avgCookie )
+            seattle.unitsSoldPerHour.push(cookiesSold);
             var childEl = document.createElement('li');
             childEl.textContent = ` ${this.shopHours[i]}: ${this.unitsSoldPerHour[i]} cookies`;
-            parentEl.appendChild(childEl);
+            seattleStore.appendChild(childEl);
         }
         
         //1. var firstShopHour = artShop.shopHours[0]s
@@ -62,5 +65,103 @@ var artShop = {
     }
 
 }
-artShop.render();
+seattle.render();
 
+//Tokyo Shore
+
+var tokyoStore = document.getElementById('tokyoLocation');
+
+var Tokyo = {
+    shopHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+    min: 3,
+    max: 24,
+    avgCookie: 1.2,
+    unitsSoldPerHour: [],
+    locationName: 'Tokyo ',
+    
+    render: function(){
+        for (var i = 0; i < this.shopHours.length; i++) {
+            var cookiesSold = Math.floor( randomNumber(Tokyo.min, Tokyo.max) * Tokyo.avgCookie )
+            Tokyo.unitsSoldPerHour.push(cookiesSold);
+            var childEl = document.createElement('li');
+            childEl.textContent = ` ${this.shopHours[i]}: ${this.unitsSoldPerHour[i]} cookies`;
+            tokyoStore.appendChild(childEl);
+        }
+        
+    }
+
+}
+Tokyo.render();
+
+// Dubai Store
+
+var dubaiStore = document.getElementById('dubaiLocation');
+
+var Dubai = {
+    shopHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+    min: 11,
+    max: 38,
+    avgCookie: 3.7,
+    unitsSoldPerHour: [],
+    location: 'Dubai',
+
+    render: function() {
+        for (var i = 0; i < this.shopHours.length; i++){
+            var cookiesSold = Math.floor (randomNumber(Dubai.min, Dubai.max)*Dubai.avgCookie)
+            Dubai.unitsSoldPerHour.push(cookiesSold);
+            var childEl = document.createElement('li');
+            childEl.textContent = `${this.shopHours[i]}: ${this.unitsSoldPerHour[i]} cookies`;
+            dubaiStore.appendChild(childEl);
+        }
+    }
+}
+
+Dubai.render();
+
+// Paris Store
+
+var parisStore = document.getElementById('parisLocation');
+
+var Paris = {
+    shopHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+    min: 20,
+    max: 38,
+    avgCookie: 2.3,
+    unitsSoldPerHour: [],
+    location: 'Paris',
+
+    render: function() {
+        for (var i = 0; i < this.shopHours.length; i++){
+            var cookiesSold = Math.floor (randomNumber(Paris.min, Paris.max)*Paris.avgCookie)
+            Paris.unitsSoldPerHour.push(cookiesSold);
+            var childEl = document.createElement('li');
+            childEl.textContent = `${this.shopHours[i]}: ${this.unitsSoldPerHour[i]} cookies`;
+            parisStore.appendChild(childEl);
+        }
+    }
+}
+
+Paris.render();
+
+// Lima Store
+
+var limaStore = document.getElementById('limaLocation');
+var Lima = {
+    shopHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm',  '5pm', '6pm', '7pm', '8pm'],
+    min: 2,
+    max: 16,
+    avgCookie: 4.6,
+    unitsSoldPerHour: [],
+    location: 'Lima',
+    render: function(){
+        for (var i= 0; i < this.shopHours.length; i++){
+            var cookiesSold = Math.floor(randomNumber(Lima.min, Lima.max)*Lima.avgCookie)
+            Lima.unitsSoldPerHour.push(cookiesSold);
+            var childEl = document.createElement('li');
+            childEl.textContent = `${this.shopHours[i]}: ${this.unitsSoldPerHour[i]} cookies`;
+            limaStore.appendChild(childEl);
+        }
+    }
+}
+
+Lima.render();

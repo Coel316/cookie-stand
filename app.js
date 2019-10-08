@@ -13,15 +13,18 @@ var iceCreamShop = {
 }
 */
 
-var seattleStore = document.getElementById('seattleLocation');
 
 // console.log("Testing the generator: " + randomNumber(3, 50));
 
 var randomNumber = function(min, max) {
-   // min = Math.ceil(min);
+    // min = Math.ceil(min);
     //max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; 
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
+
+//Seattle store
+
+var seattleStore = document.getElementById('seattleLocation');
 
 var seattle = {
     shopHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],

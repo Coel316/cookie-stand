@@ -1,14 +1,12 @@
-<!-- example of what we did in class on 10-7-2019 -->
-
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Cookies</title>
-    </head>
+<head>
+    <title>Cookies</title>
+</head>
 
-    <body>
-        <!-- <main>
+<body>
+    <!-- <main>
             <ul id="seattleLocation"><b>Seattle</b></ul>
             <ul id='tokyoLocation'><b>Tokyo</b></ul>
             <ul id="dubaiLocation"><b>Dubai</b></ul>
@@ -19,25 +17,21 @@
                 <p id="childElement">Am I alive</p>
             </ul>
         </main> -->
-        
-        <!-- // start table -->
-        
-        
-        <!-- -->
-        
-        
-        
-        <!-- document.createElement()-->
-        <!-- document.getElementById()-->
-        <!-- [element].appendChild()-->  <!--ADDITION-->
-        <!-- [element].textContent = "STRING"-->
-        
-        <table id="testTable">
-            
-        </table>
-        
-        <script src="app2.js"></script>
-        <!-- <script type="application/javascript"> 
+
+    <!-- // start table -->
+
+
+    <!-- document.createElement()-->
+    <!-- document.getElementById()-->
+    <!-- [element].appendChild()-->
+    <!--ADDITION-->
+    <!-- [element].textContent = "STRING"-->
+
+    <table id="testTable">
+
+    </table>
+
+    <!-- <script type="application/javascript"> 
 
             //Grabbing the table element from HTML
             var tableElement = document.getElementById('testTable')
@@ -64,8 +58,6 @@
             rowElement.appendChild(rowElementData3);
 
 
-
-
             // rowElement
             //Filling your row element with info
             // rowElement.textContent = "HELLO WORLD"
@@ -76,30 +68,27 @@
         </script> -->
 
 
+    <!-- Start FORM -->
 
-        <!-- <table id="mainTable">
-            <tr>
-                <th>9:00AM</th>
-            </tr>
-            <tr>
-                <th>Seattle</th>
-                <td>info 1</td>
-                <td>info 2</td>
-                <td>info 3</td>
-            </tr>
-            <tr> 
-                <th>Paris</th>
-            </tr>
-        </table> -->
+    <form id="user-form">
+        <fieldset>
+            <label>Enter Store name: </label>
+            <input id="inputStoreName" type="text" placeholder="Store Name"></br>
+            <label>Enter minimum cookies: </label>
+            <input id="inputMinimumCookie" type="text" placeholder="Miminum Cookies"></br>
+            <label>Enter maximum cookies: </label>
+            <input id="inputMaximumCookie" type="text" placeholder="Maximum Cookies"></br>
+            <label>Enter Average Cookie</label>
+            <input id="inputAverageCookie" type="text" placeholder="Average Cookie sold">
+            </br>
+            </br>
 
-    </body>
+            <!-- //button -->
+            <button value="submit">Submit</button>
 
+        </fieldset>
+    </form>
 
-<!-- <head> 
-        <style>
-        table, th, tr {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        </style>
-    </head> -->
+</body>
+
+<script src="app2.js"></script>

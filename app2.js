@@ -6,6 +6,30 @@
 // var parisStore = document.getElementById('parisLocation');
 // var limaStore = document.getElementById('limaLocation');
 
+// start form data
+
+var userForm = document.getElementById('user-form');
+userForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log('event.target.inputStoreName.value: ', event.target, event.event.target.inputStoreName.value);
+  console.log('event.target.inputMaximumCookie.value: ', event.target.inputMinimumCookie.value);
+
+  var onSubmitStoreName = event.target.inputStoreName.value;
+  var onSubmitMinimumCookie = event.target.inputMinimumCookie.value;
+  var onSubmitMaximumCookie = event.target.inputMaximumCookie.value;
+  var onSubmitAverageCookie = event.target.inputAverageCookie.value;
+
+  if(isNaN(onSubmitMinimumCookie)) {
+    alert('Try again.  Enter a number');
+    event.target.inputMinimumCookie.value = null;
+    // event.target.inputMaximumCookie.value = null;
+    // event.target.inputAverageCookie.value = null;
+  }
+  alert(`The Store you entered is: ${onSubmitStoreName} , minimum Cookies: ${onSubmitMinimumCookie} , maximum cookies: ${onSubmitMaximumCookie} , Average Cookies: ${onSubmitAverageCookie}`)
+}
+
 
 function Store(location, min, max, avgCookie) {
   this.minimum = min;
@@ -79,24 +103,6 @@ Store.prototype.render = function () {
   }
 
 
-  //   // frying pan
-  //   var rowElementData2 = document.createElement('td');
-  //   rowElementData2.textContent = "Frying pan";
-  //   rowElement.appendChild(rowElementData2);
-
-
-  //   // kitchen knife
-  //   var rowElementData3 = document.createElement('td');
-  //   rowElementData3.textContent = "Kitchen knife";
-  //   rowElement.appendChild(rowElementData3);
-
-
-
-
-  //   // rowElement
-  //   //Filling your row element with info
-  //   // rowElement.textContent = "HELLO WORLD"
-
   //Adding row to the table
   tableElement.appendChild(rowElement);
 
@@ -136,4 +142,3 @@ var limaMarketplace = new Store('Lima', 2, 16, 4.6);
 
 limaMarketplace.render();
 // console.log(limaMarketplace.render());
-

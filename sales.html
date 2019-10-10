@@ -1,27 +1,101 @@
- <!-- example of what we did in class on 10-7-2019 -->
+<!-- example of what we did in class on 10-7-2019 -->
 
- <!DOCTYPE html>
- <html>
-     <head>
-         <title>Cookies</title>
-     </head>
-     <body>
-         <main>
-             <ul id="seattleLocation"><b>Seattle</b></ul>
-             <ul id='tokyoLocation'><b>Tokyo</b></ul>
-             <ul id="dubaiLocation"><b>Dubai</b></ul>
-             <ul id="parisLocation"><b>Paris</b></ul>
-             <ul id="limaLocation"><b>Lima</b></ul>
- 
-             <!-- <ul id="parentElement"> 
-              <p id="childElement">Am I alive</p> -->
-             </ul>
-         </main>
-         <script src = "app2.js"></script>
-     </body>
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Cookies</title>
+    </head>
+
+    <body>
+        <!-- <main>
+            <ul id="seattleLocation"><b>Seattle</b></ul>
+            <ul id='tokyoLocation'><b>Tokyo</b></ul>
+            <ul id="dubaiLocation"><b>Dubai</b></ul>
+            <ul id="parisLocation"><b>Paris</b></ul>
+            <ul id="limaLocation"><b>Lima</b></ul>
+
+            <ul id="parentElement"> 
+                <p id="childElement">Am I alive</p>
+            </ul>
+        </main> -->
+        
+        <!-- // start table -->
+        
+        
+        <!-- -->
+        
+        
+        
+        <!-- document.createElement()-->
+        <!-- document.getElementById()-->
+        <!-- [element].appendChild()-->  <!--ADDITION-->
+        <!-- [element].textContent = "STRING"-->
+        
+        <table id="testTable">
+            
+        </table>
+        
+        <script src="app2.js"></script>
+        <!-- <script type="application/javascript"> 
+
+            //Grabbing the table element from HTML
+            var tableElement = document.getElementById('testTable')
+            // console.log('TABLE ELEMENT: ', tableElement);
+
+            //Building your row element
+            var rowElement = document.createElement('tr');
+            // console.log('ROW ELEMENT: ', rowElement);
+
+            var rowElementData = document.createElement('td');
+            rowElementData.textContent = "Pot";
+
+            rowElement.appendChild(rowElementData);
+            
+            // frying pan
+            var rowElementData2 = document.createElement('td');
+            rowElementData2.textContent = "Frying pan";
+            rowElement.appendChild(rowElementData2);
+            
+
+            // kitchen knife
+            var rowElementData3 = document.createElement('td');
+            rowElementData3.textContent = "Kitchen knife";
+            rowElement.appendChild(rowElementData3);
 
 
-    <!-- <head> 
+
+
+            // rowElement
+            //Filling your row element with info
+            // rowElement.textContent = "HELLO WORLD"
+
+            //Adding row to the table
+            tableElement.appendChild(rowElement);
+            
+        </script> -->
+
+
+
+        <!-- <table id="mainTable">
+            <tr>
+                <th>9:00AM</th>
+            </tr>
+            <tr>
+                <th>Seattle</th>
+                <td>info 1</td>
+                <td>info 2</td>
+                <td>info 3</td>
+            </tr>
+            <tr> 
+                <th>Paris</th>
+            </tr>
+        </table> -->
+
+    </body>
+
+
+<!-- <head> 
         <style>
         table, th, tr {
             border: 1px solid black;
@@ -29,7 +103,3 @@
         }
         </style>
     </head> -->
-
- 
- 
- 

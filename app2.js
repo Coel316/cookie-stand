@@ -75,6 +75,10 @@ function createHeaderRow() {
 
   // made an empty cell
   var emptyCell = document.createElement('th');
+  var storeTotalHeader = document.createElement('th');
+
+  storeTotalHeader.textContent = 'Daily Total';
+
   rowElement.appendChild(emptyCell);
 
   for (var i = 0; i < shopHours.length; i++) {
@@ -82,6 +86,8 @@ function createHeaderRow() {
     rowElementData.textContent = shopHours[i];
     rowElement.appendChild(rowElementData);
   }
+
+  rowElement.appendChild(storeTotalHeader);
   tableElement.appendChild(rowElement);
 }
 
@@ -149,8 +155,25 @@ function createFooterRow(){
     footerRow.appendChild(footerData);
   }
 
+  //Add all totals together and add to final cell
+
+  //Store Totals
+
+  var companySalesTotalData = document.createElement('td');
   
+  companySalesTotalData.textContent = calculateTotalCookiesSoldForCompany();
+
+  footerRow.appendChild(companySalesTotalData);
+
   tableElement.appendChild(footerRow);
+}
+
+function calculateTotalCookiesSoldForCompany(){
+  var total = 0;
+  for (var i = 0; i < allStores.length; i++){
+    total = total + allStores[i].totalCookiesSoldDaily;
+  }
+  return total;
 }
 
 
@@ -167,7 +190,8 @@ for (var i = 0; i < allStores.length; i++){
   allStores[i].render();
 }
 
+
+
+
 calculateTotalPerHour();
 createFooterRow();
-
-

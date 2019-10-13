@@ -160,7 +160,7 @@ function createFooterRow(){
   //Store Totals
 
   var companySalesTotalData = document.createElement('td');
-  
+
   companySalesTotalData.textContent = calculateTotalCookiesSoldForCompany();
 
   footerRow.appendChild(companySalesTotalData);
@@ -189,9 +189,6 @@ var limaMarketplace = new Store('Lima', 2, 16, 4.6);
 for (var i = 0; i < allStores.length; i++){
   allStores[i].render();
 }
-
-
-
 
 calculateTotalPerHour();
 createFooterRow();
